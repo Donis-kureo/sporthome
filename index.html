@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="lt">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>SportHome — Sportuok namuose | Home workouts app</title>
+<meta name="description" content="SportHome — lietuviška namų treniruočių programėlė. Vaizdo treniruotės su trenerio balsu jūsų telefone. Startuoja 2026 Q4.">
+<style>
+  :root{
+    --bg:#0e1420; --bg2:#141c2c; --card:#1a2436;
+    --accent:#38b6ff; --accent2:#27e08c;
+    --text:#eef3fa; --muted:#93a3b8;
+  }
+  *{margin:0;padding:0;box-sizing:border-box}
+  body{background:var(--bg);color:var(--text);font-family:'Segoe UI',system-ui,-apple-system,sans-serif;line-height:1.6;min-height:100vh;display:flex;flex-direction:column}
+  .wrap{max-width:920px;margin:0 auto;padding:0 24px;width:100%}
+  header{padding:22px 0;display:flex;justify-content:space-between;align-items:center}
+  .logo{font-size:1.35rem;font-weight:800;letter-spacing:.5px}
+  .logo span{color:var(--accent2)}
+  .lang{display:flex;gap:6px}
+  .lang button{background:var(--card);color:var(--muted);border:1px solid #263349;border-radius:8px;padding:5px 12px;cursor:pointer;font-weight:600}
+  .lang button.on{color:var(--text);border-color:var(--accent);background:#1c2a42}
+  main{flex:1;display:flex;align-items:center}
+  .hero{padding:48px 0 64px;text-align:center}
+  .badge{display:inline-block;background:linear-gradient(90deg,#1c2a42,#183a34);border:1px solid #2b4160;color:var(--accent2);font-weight:700;font-size:.85rem;border-radius:999px;padding:7px 18px;margin-bottom:26px;letter-spacing:.4px}
+  h1{font-size:clamp(2rem,5.5vw,3.4rem);font-weight:800;line-height:1.15;margin-bottom:18px}
+  h1 em{font-style:normal;color:var(--accent)}
+  .h1sub{display:block;font-size:.62em;font-weight:700;margin-top:8px}
+  .sub{color:var(--muted);font-size:1.12rem;max-width:640px;margin:0 auto 42px}
+  .features{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:14px;text-align:left;margin-bottom:46px}
+  .card{background:var(--card);border:1px solid #223049;border-radius:14px;padding:20px}
+  .card .ic{font-size:1.5rem;margin-bottom:8px;display:block}
+  .card h3{font-size:1rem;margin-bottom:4px}
+  .card p{color:var(--muted);font-size:.92rem}
+  .contact{color:var(--muted);font-size:.98rem}
+  .contact a{color:var(--accent);text-decoration:none;font-weight:600}
+  footer{border-top:1px solid #1d2940;padding:22px 0;color:#6d7d92;font-size:.85rem;text-align:center}
+  footer .row{display:flex;flex-wrap:wrap;gap:8px 22px;justify-content:center}
+</style>
+</head>
+<body>
+<div class="wrap">
+<header>
+  <div class="logo">Sport<span>Home</span></div>
+  <div class="lang">
+    <button id="btn-lt" class="on" onclick="setLang('lt')">LT</button>
+    <button id="btn-en" onclick="setLang('en')">EN</button>
+  </div>
+</header>
+</div>
+
+<main>
+<div class="wrap hero">
+  <div class="badge" data-lt="Startuojame 2026 Q4" data-en="Launching Q4 2026">Startuojame 2026 Q4</div>
+  <h1 data-lt='Sportuok <em>Namuose</em>.<span class="h1sub">Trenerio vedamos treniruotės tavo telefone.</span>'
+      data-en='Work out <em>at home</em>.<span class="h1sub">Coach-guided workouts on your phone.</span>'>
+      Sportuok <em>Namuose</em>.<span class="h1sub">Trenerio vedamos treniruotės tavo telefone.</span></h1>
+  <p class="sub"
+     data-lt="SportHome — lietuviška namų treniruočių programėlė: vaizdo treniruotės su balso vedimu ir asmeninis planas pagal tavo tikslą. iOS ir Android."
+     data-en="SportHome is a Lithuanian home fitness app: guided workout videos with voice coaching and a personal plan built around your goal. iOS and Android.">
+     SportHome — lietuviška namų treniruočių programėlė: vaizdo treniruotės su balso vedimu ir asmeninis planas pagal tavo tikslą. iOS ir Android.</p>
+
+  <div class="features">
+    <div class="card"><span class="ic">🎥</span>
+      <h3 data-lt="Vaizdo treniruotės" data-en="Video workouts">Vaizdo treniruotės</h3>
+      <p data-lt="Profesionalios treniruotės namų sąlygoms — be salės ir brangios įrangos." data-en="Professional workouts designed for home — no gym or expensive equipment.">Profesionalios treniruotės namų sąlygoms — be salės ir brangios įrangos.</p></div>
+    <div class="card"><span class="ic">🗣️</span>
+      <h3 data-lt="Trenerio balsas" data-en="Voice coaching">Trenerio balsas</h3>
+      <p data-lt="Vedimas lietuvių kalba kiekvieno pratimo metu." data-en="Lithuanian voice guidance through every exercise.">Vedimas lietuvių kalba kiekvieno pratimo metu.</p></div>
+    <div class="card"><span class="ic">📈</span>
+      <h3 data-lt="Asmeninis planas" data-en="Personal plan">Asmeninis planas</h3>
+      <p data-lt="Planas pagal tavo tikslą, lygį ir savaitės ritmą + progreso istorija." data-en="A plan matched to your goal, level and weekly schedule + progress history.">Planas pagal tavo tikslą, lygį ir savaitės ritmą + progreso istorija.</p></div>
+  </div>
+
+  <p class="contact" data-lt='Klausimai ir partnerystės: <a href="mailto:info@sporthome.app">info@sporthome.app</a>'
+     data-en='Questions &amp; partnerships: <a href="mailto:info@sporthome.app">info@sporthome.app</a>'>
+     Klausimai ir partnerystės: <a href="mailto:info@sporthome.app">info@sporthome.app</a></p>
+</div>
+</main>
+
+<footer>
+<div class="wrap row">
+  <span>© 2026 UAB „Amg“</span>
+  <span data-lt="Įmonės kodas: 308103247" data-en="Company code: 308103247">Įmonės kodas: 308103247</span>
+  <span>Vilnius, Lietuva</span>
+  <span>info@sporthome.app</span>
+</div>
+</footer>
+
+<script>
+function setLang(l){
+  document.documentElement.lang = l;
+  document.querySelectorAll('[data-lt]').forEach(el=>{ el.innerHTML = el.getAttribute('data-'+l); });
+  document.getElementById('btn-lt').classList.toggle('on', l==='lt');
+  document.getElementById('btn-en').classList.toggle('on', l==='en');
+}
+</script>
+</body>
+</html>
